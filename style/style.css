@@ -1,0 +1,340 @@
+
+/*Если кто-то решил прочесть данный код, то лучше закройте и не тратьте нервы. Все было сделано на коленках за час. НЕ СТОИТ СЕБЯ ДОБИВАТЬ*/
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --varyDarkBlueMoreLight: hsl(234, 14%, 45%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body
+{
+    background-color: var(--veryLightGray);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* header */
+
+.header {
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    max-height: 400px;
+    width: 100%;
+    padding-top: 17px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background: none;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    padding-bottom: 6px;
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--varyDarkBlue);
+  }
+  @media only screen and (max-width: 766px) {
+    .header {
+      padding-top: 25px;
+    }
+  }
+  
+  .open-nav {
+    max-height: 400px !important;
+  }
+  .open-nav .mobile-toggle {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+  }
+  
+  .sticky {
+    background-color: rgba(255, 255, 255, 0.93);
+    opacity: 1;
+    top: 0px;
+    border-bottom: 1px solid gainsboro;
+  }
+  
+  nav {
+    float: right;
+    width: 60%;
+  }
+  @media only screen and (max-width: 766px) {
+    nav {
+      width: 100%;
+    }
+  }
+  nav ul {
+    list-style: none;
+    overflow: hidden;
+    text-align: right;
+    float: right;
+  }
+  @media only screen and (max-width: 766px) {
+    nav ul {
+      padding-top: 10px;
+      margin-bottom: 22px;
+      float: left;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  nav ul li {
+    display: inline-block;
+    margin-left: 35px;
+    line-height: 1.5;
+  }
+  @media only screen and (max-width: 766px) {
+    nav ul li {
+      width: 100%;
+      padding: 7px 0;
+      margin: 0;
+    }
+  }
+  nav ul a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  
+  .mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    width: 30px;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+  }
+  @media only screen and (max-width: 766px) {
+    .mobile-toggle {
+      display: block;
+    }
+  }
+  .mobile-toggle span {
+    width: 30px;
+    height: 4px;
+    margin-bottom: 6px;
+    border-radius: 1000px;
+    background: #8f8f8f;
+    display: block;
+  }
+  
+  .row {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 2%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .content {
+    padding: 50px 2% 250px;
+  }
+  
+  @-webkit-keyframes scroll {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    100% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      transform: translateY(20px);
+    }
+  }
+  @keyframes scroll {
+    0% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    100% {
+      opacity: 0;
+      -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+      transform: translateY(20px);
+    }
+  }
+
+/* section-subjectArea */
+
+.container{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 90px;
+    display: block;
+}
+
+.section-heading{
+    text-align: center;
+    font-size: 50px;
+    text-decoration: overline;
+}
+.section-paragraph{
+    padding: 10px;
+    text-align: center;
+    display: block;
+    font-size: 30px;
+    color: var(--varyDarkBlue);
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--varyDarkBlue);
+    
+}
+.section-list li:not(:last-child){
+    margin-bottom: 50px;
+  }
+
+.section-list li{
+    padding: 10px;
+    border: 3px solid var(--varyDarkBlue);
+    color: rgb(178, 177, 177);
+    background-color: var(--varyDarkBlueMoreLight);
+    display: inline-block;
+    border-radius: 10px;
+    display: block;
+  }
+
+/* section-componentsAndData */
+
+.section-componentsAndData {
+    font-size: 15px;
+}
+
+
+h1:first-of-type {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+
+}
+
+h1:last-of-type {
+    color: var(--varyDarkBlue);
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.box p {
+    color: var(--grayishBlue);
+}
+
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;  
+}
+
+.section-componentsAndData-img {
+    float: right;
+}
+
+@media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+    .box {
+        text-align: center;
+        height: 180px;
+    }
+}
+
+.cyan {
+    border-top: 3px solid var(--cyan);
+}
+.red {
+    border-top: 3px solid var(--red);
+}
+.blue {
+    border-top: 3px solid var(--blue);
+}
+.orange {
+    margin-top: 150px;
+    border-top: 3px solid var(--orange);
+}
+
+h2 {
+    color: var(--varyDarkBlue);
+    font-weight: var(--weight3);
+}
+
+
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row2-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-down {
+        position: relative;
+        top: 150px;
+    }
+    .box {
+        width: 20%;
+     
+    }
+    .header p {
+        width: 30%;
+    }
+    
+}
+
+/*footer*/
+
+.fixed_footer{
+    width: 100%;
+    height: 200px;
+    background: var(--varyDarkBlue);
+  }
+
+.fixed_footer p{
+    color: white;
+    column-count: 2;
+    column-gap: 50px;
+    font-size: 1em;
+    font-weight: 300;
+}
+.content{
+    justify-content: center;
+    display: inline-block;
+    text-align: center;
+    width: 850px; 
+    margin-left: 38%;
+    margin-right: 50%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px;
+  }
